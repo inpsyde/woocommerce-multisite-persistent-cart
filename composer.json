@@ -1,0 +1,31 @@
+{
+	"name": "inpsyde/woocommerce-multisite-persistent-cart",
+	"description": "Multisite aware persistent storage for user carts",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"license": "MIT",
+	"type": "wordpress-plugin",
+	"authors": [
+		{
+			"name": "Inpsyde GmbH",
+			"homepage": "http://inpsyde.com/",
+			"email": "hallo@inpsyde.com",
+			"role": "Company"
+		},
+		{
+			"name": "David Naber",
+			"email": "d.naber@inpsyde.com",
+			"role": "Developer"
+		}
+	],
+	"require": {
+        "woocommerce/woocommerce": "~2.6.7"
+	},
+	"require-dev": {
+	},
+	"autoload": {
+		"psr-4": {
+			"Inpsyde\\WooCommerce\\MultisitePersistentCart\\": "src/"
+		}
+	}
+}
