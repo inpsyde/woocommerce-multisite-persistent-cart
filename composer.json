@@ -19,9 +19,11 @@
 		}
 	],
 	"require": {
-        "woocommerce/woocommerce": "~2.6.7"
+        "php": ">=5.6",
+        "woocommerce/woocommerce": "<=2.6.8"
 	},
 	"require-dev": {
+		"inpsyde/monkery-test-case": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {

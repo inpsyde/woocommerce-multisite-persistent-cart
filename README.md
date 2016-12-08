@@ -24,6 +24,21 @@ $ composer require inpsyde/woocommerce-multisite-persistent-cart
 
 Just install and activate the plugin, nothing more to do.
 
+## Unit tests
+Install PHPUnit via [Phive](https://phar.io/):
+
+```
+$ phive install
+```
+
+and run `$ tests/bin/phpunit`.
+
+Alternatively can also install phpunit via Composer:
+
+```
+$ composer global require phpunit/phpunit
+```
+
 ## Crafted by Inpsyde
 
 The team at [Inpsyde](http://inpsyde.com) is engineering the Web since 2006.

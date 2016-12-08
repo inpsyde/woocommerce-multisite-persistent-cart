@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+	bootstrap="vendor/inpsyde/monkery-test-case/inc/bootstrap.php"
+	backupGlobals="false"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	>
+	<testsuites>
+		<testsuite name="WooCommerce Multisite Persistent Cart php unit tests">
+			<directory suffix="Test.php">./tests/PHPUnit</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>

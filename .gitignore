@@ -1,2 +1,6 @@
 /vendor/
+# WooCommerce requires composer/installers as dependency…
+/wp-content/
+/tests/bin/
 phpunit.xml
+composer.lock
