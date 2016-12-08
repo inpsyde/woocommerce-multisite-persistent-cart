@@ -9,7 +9,7 @@
  * Version:     dev-master
  * License:     MIT
  * Text Domain: woocommerce-multisite-persistent-cart
- * Multisite:   true
+ * Network:     true
  */
 
 namespace Inpsyde\WooCommerce\MultisitePersistentCart;
