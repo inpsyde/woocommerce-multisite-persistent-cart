@@ -90,6 +90,8 @@ final class UserMetaKeySwitch implements MetaDataListener {
 	 */
 	public function get_metadata( $default, $object_id, $meta_key, $single ) {
 
+		$single    = (bool) $single;
+		$object_id = (int) $object_id;
 		if ( $this->bypass_get || ! $this->switch_key( $meta_key, $object_id ) ) {
 			return $default;
 		}
@@ -98,6 +100,8 @@ final class UserMetaKeySwitch implements MetaDataListener {
 		$this->bypass_get = TRUE;
 		$result           = get_user_meta( $object_id, $mapped_key, $single );
 		$this->bypass_get = FALSE;
+
+		$single and $result = [ $result ];
 
 		return metadata_exists( 'user', $object_id, $mapped_key )
 			? $result

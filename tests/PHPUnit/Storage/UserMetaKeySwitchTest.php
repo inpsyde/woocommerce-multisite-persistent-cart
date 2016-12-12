@@ -174,8 +174,12 @@ class UserMetaKeySwitchTest extends BrainMonkeyWpTestCase {
 			->andReturn( TRUE );
 
 		$testee = new UserMetaKeySwitch( $key_map );
+		$expected = $meta_record[ 'single' ]
+			? [ $meta_record[ 'value' ] ]
+			: $meta_record[ 'value' ];
+
 		$this->assertSame(
-			$meta_record[ 'value' ],
+			$expected,
 			$testee->get_metadata(
 				'whatever', $meta_record[ 'user_id' ], $meta_record[ 'key' ], $meta_record[ 'single' ]
 			)
@@ -290,8 +294,12 @@ class UserMetaKeySwitchTest extends BrainMonkeyWpTestCase {
 		Functions::when( 'metadata_exists' )
 			->justReturn( TRUE );
 
+		$expected = $meta_record[ 'single' ]
+			? [ $meta_record[ 'value' ] ]
+			: $meta_record[ 'value' ];
+
 		$this->assertSame(
-			$meta_record[ 'value' ],
+			$expected,
 			$testee->get_metadata(
 				$default,
 				$meta_record[ 'user_id' ],
@@ -577,6 +585,19 @@ class UserMetaKeySwitchTest extends BrainMonkeyWpTestCase {
 				'mapped_key'     => '_bar',
 				'previous_value' => 'foo',
 				'single'         => TRUE,
+				'delete_all'     => TRUE
+			]
+		];
+
+		$data[ 'unique_delete_all_record_with_previous_value' ] = [
+			[
+				'user_id'        => 42,
+				'key'            => '_foo',
+				'value'          => 'bar',
+				'unique'         => TRUE,
+				'mapped_key'     => '_bar',
+				'previous_value' => 'foo',
+				'single'         => FALSE,
 				'delete_all'     => TRUE
 			]
 		];
