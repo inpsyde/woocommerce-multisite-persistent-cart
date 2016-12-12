@@ -64,6 +64,9 @@ final class UserMetaKeySwitch implements MetaDataListener {
 	 */
 	public function add_metadata( $default, $object_id, $meta_key, $meta_value, $unique ) {
 
+		$object_id = (int) $object_id;
+		$unique    = (bool) $unique;
+		$meta_key  = (string) $meta_key;
 		if ( $this->bypass_add || ! $this->switch_key( $meta_key, $object_id, $meta_value ) ) {
 			return $default;
 		}
@@ -92,6 +95,7 @@ final class UserMetaKeySwitch implements MetaDataListener {
 
 		$single    = (bool) $single;
 		$object_id = (int) $object_id;
+		$meta_key  = (string) $meta_key;
 		if ( $this->bypass_get || ! $this->switch_key( $meta_key, $object_id ) ) {
 			return $default;
 		}
@@ -121,6 +125,8 @@ final class UserMetaKeySwitch implements MetaDataListener {
 	 */
 	public function update_metadata( $default, $object_id, $meta_key, $meta_value, $prev_value ) {
 
+		$object_id = (int) $object_id;
+		$meta_key  = (string) $meta_key;
 		if ( $this->bypass_update || ! $this->switch_key( $meta_key, $object_id, $meta_value ) ) {
 			return $default;
 		}
@@ -148,6 +154,9 @@ final class UserMetaKeySwitch implements MetaDataListener {
 	 */
 	public function delete_metadata( $default, $object_id, $meta_key, $meta_value, $delete_all ) {
 
+		$object_id  = (int) $object_id;
+		$meta_key   = (string) $meta_key;
+		$delete_all = (bool) $delete_all;
 		if ( $this->bypass_delete || ! $this->switch_key( $meta_key, $object_id, $meta_value ) ) {
 			return $default;
 		}
