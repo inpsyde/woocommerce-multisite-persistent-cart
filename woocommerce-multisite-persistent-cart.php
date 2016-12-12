@@ -3,10 +3,10 @@
 /**
  * Plugin Name: WooCommerce Multisite Persistent Cart
  * Description: Multisite aware persistent storage for user carts
- * Plugin URI:  TODO
+ * Plugin URI:  https://github.com/inpsyde/woocommerce-multisite-persistent-cart/
  * Author:      Inpsyde GmbH
  * Author URI:  http://inpsyde.com/
- * Version:     dev-master
+ * Version:     1.0.0
  * License:     MIT
  * Text Domain: woocommerce-multisite-persistent-cart
  * Network:     true
