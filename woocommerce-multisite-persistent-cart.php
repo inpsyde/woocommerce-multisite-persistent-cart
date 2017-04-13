@@ -6,7 +6,7 @@
  * Plugin URI:  https://github.com/inpsyde/woocommerce-multisite-persistent-cart/
  * Author:      Inpsyde GmbH
  * Author URI:  http://inpsyde.com/
- * Version:     dev-master
+ * Version:     1.0.1
  * License:     MIT
  * Text Domain: woocommerce-multisite-persistent-cart
  * Network:     true
