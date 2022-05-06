@@ -8,8 +8,6 @@ The plugin stores carts persistent in the user meta `_woocommerce_persistent_car
 ## UNMAINTAINED
 **Note:** This version of the plugin is not maintained anymore.
 
-## Commands
-
 
 ## Installation
 
