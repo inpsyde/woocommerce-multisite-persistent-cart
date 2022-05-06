@@ -4,6 +4,13 @@ Hotfix for WooCommerce [#12534](https://github.com/woocommerce/woocommerce/issue
 
 The plugin stores carts persistent in the user meta `_woocommerce_persistent_cart_<SITE_ID>` to avoid collisions on multiple shops in a multisite network.
 
+
+## UNMAINTAINED
+**Note:** This version of the plugin is not maintained anymore.
+
+## Commands
+
+
 ## Installation
 
 Install this plugin via composer:
